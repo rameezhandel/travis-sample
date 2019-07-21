@@ -1,4 +1,19 @@
 language: objective-c
 osx_image: xcode10.2
+
+branches:
+  only:
+    - develop
+    - master
+env:
+  - LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
+before_install:
+  - rvm install ruby-2.2.2
+  - gem install cocoapods
+  - gem install xcpretty -N
+  - brew update
+  - brew install swiftlint || true
 script:
-  - xcodebuild test -project Travis-Sample.xcodeproj -scheme Travis-Sample. -destination "platform=iOS Simulator,name=iPhone 7" CODE_SIGNING_REQUIRED=NO
+  - set -o pipefail
+  - xcodebuild -workspace Travis-Sample.xcworkspace -scheme Travis-Sample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - swiftlint

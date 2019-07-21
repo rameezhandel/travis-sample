@@ -7,7 +7,25 @@
 		<key>Travis-Sample.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>514675EC22E44BEE00D9FE8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5146760022E44BF000D9FE8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5146760B22E44BF000D9FE8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
