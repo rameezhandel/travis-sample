@@ -11,9 +11,6 @@ before_install:
   - rvm install ruby-2.2.2
   - gem install cocoapods
   - gem install xcpretty -N
-  - brew update
-  - brew install swiftlint || true
 script:
   - set -o pipefail
   - xcodebuild -workspace Travis-Sample.xcworkspace -scheme Travis-Sample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - swiftlint
